@@ -1,0 +1,329 @@
+/*通用設定*/
+
+html, body{
+	height: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*網頁動畫*/
+canvas{
+	width: 100%;
+	height: 150%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*連結設定*/
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:active,a:hover,a:link,a:visited{
+	color:#FF0;
+	text-decoration:none;
+}
+
+
+nav~ul{
+	position: relative;	
+	list-style: none;
+	left: 10%;
+	visibility: hidden;
+	opacity: 0;
+}
+
+nav~ul>li {
+	margin-top:13px; 
+	margin-right: 50px; 
+	font-size: 20px
+}
+nav.open~ul {
+    transition: .75s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+
+ul>li>a>i{
+	color:#d9df06;
+	padding-right:8px;
+}
+
+/*通用設定END*/
+
+
+
+/**不規則按鈕設定**/
+
+.btn {
+  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 1.3em;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-clear {
+  background-color: transparent;
+}
+
+.btn-clear:hover {
+  background-color: #121212;
+  color: #121212;
+}
+
+.btn-clear.btn-light {
+  border-color: yellow;
+  color: yellow;
+}
+
+.btn-clear.btn-light:hover {
+  color: #121212;
+  background-color: yellow;
+}
+
+.btn-light:hover {
+  background-color: #121212;
+  color: #fff;
+}
+
+.btn-glitch {
+  transform: translateZ(0);
+  overflow: visible;
+}
+
+.btn-glitch.btn-glitch-active {
+  -webkit-filter: url("#filter");
+  filter: url("#filter");
+}
+.btn-glitch.btn-glitch-active::after, .btn-glitch.btn-glitch-active::before {
+  content: '';
+  width: 1px;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+}
+
+.btn-glitch.btn-glitch-active::after {
+  left: -2px;
+  background-color: #ff536b;
+  animation: colorshift-red 2.6s infinite;
+  animation-timing-function: step-end;
+}
+
+.btn-glitch.btn-glitch-active::before {
+  right: -2px;
+  background-color: #3ffeff;
+  animation: colorshift-blue 2.6s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes colorshift-red {
+  0%, 7% {
+    background-color: #ff536b;
+  }
+  8%, 18% {
+    background-color: transparent;
+  }
+  19% {
+    background-color: #ff536b;
+    width: 2px;
+  }
+  23%, 100% {
+    background-color: transparent;
+  }
+}
+@keyframes colorshift-blue {
+  0%, 7% {
+    background-color: #3ffeff;
+  }
+  8%, 18% {
+    background-color: transparent;
+  }
+  19% {
+    background-color: #3ffeff;
+    width: 2px;
+  }
+  23%, 100% {
+    background-color: transparent;
+  }
+}
+
+/*不規則按鈕設定END*/
+
+/*Scroll動畫設定(暫時棄用)*/
+
+#section_1{
+
+	background: #FFB27FFF center center / cover no-repeat;
+}
+
+#section_1 a {
+  padding-top: 80px;
+}
+#section_1 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section_1 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#section_1 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+#section_1 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*Scroll動畫設定END(暫時棄用)*/
+
+
+/*響應式尺寸設定*/
+
+@media (max-width: 576px){
+	div.container .row p{
+		visibility: hidden;
+	}
+	.wrapper_2 img{
+		position: relative;
+		margin-top:100px; 
+		margin-bottom:20px; 
+		left: 30px;
+	}
+}
+
+@media (min-width: 576px){
+	div.container .row p{
+		visibility: hidden;
+	}
+	.wrapper_2 img{
+		position: relative;
+		margin-top:100px; 
+		margin-bottom:20px; 
+		left: 30px;
+	}
+}
+
+@media (min-width: 768px) {
+	.btn {
+		font-size: 1.2em;
+  		padding: 10px;
+  		margin-left: 10px;
+  		width: 120px;
+
+	}
+
+	div.container .row p{
+		visibility: visible;
+		margin-top: 8px;
+		font-size: 2.4vmin;
+	}
+	.wrapper_2 img{
+		position: relative;
+		margin-top:180px; 
+		margin-bottom:20px; 
+		left: 200px;
+	}
+    .wrapper_2 .container .row a{
+	     padding-right: 1px;
+	     margin-left: 10px;
+	     margin-right: 25px; 
+    }
+}
+
+@media (min-width: 992px){
+	div.container .row p{
+		visibility: visible;
+		margin-top: 5px;
+		font-size: 2.4vmin;
+	}
+	.wrapper_2 img{
+		position: relative;
+		margin-top:180px; 
+		margin-bottom:20px; 
+		left: 290px;
+	}
+    .wrapper_2 .container .row a{
+	     padding-right: 5px;
+	     margin-left: 8px;
+	     margin-right: 10px; 
+    }
+}
+
+@media (min-width: 1200px){
+	div.container .row p{
+		visibility: visible;
+		margin-top: 5px;
+		font-size: 2.4vmin;
+	}
+	.wrapper_2 img{
+		position: relative;
+		margin-top:180px; 
+		margin-bottom:20px; 
+		left: 360px;
+	}
+    .wrapper_2 .container .row a{
+	     padding-right: 5px;
+	     margin-left: 8px;
+	     margin-right: 10px; 
+    }
+}
+/*響應式尺寸設定END*/

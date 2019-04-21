@@ -1,0 +1,55 @@
+
+/*上方工具列按鈕動畫設定*/
+
+#drop>div,nav,nav~ul {
+    display: flex;
+    z-index: 100;
+}
+
+#drop {
+    cursor: pointer;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 0 50% 50%;
+    transform: rotate(45deg);
+    transition: border-radius .5s
+}
+
+
+#drop.active {
+    border-radius: 50%;
+    animation: drop .3s forwards
+}
+
+#drop>div {
+    transform: rotate(-45deg);
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#drop span {
+    display: block;
+    background-color: #F00;
+    width: 40px;
+    height: 3px;
+    margin: 5px 0;
+    transition: .5s
+}
+
+#drop span.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px)
+}
+
+#drop span.open:nth-child(2) {
+    transform: rotate(-45deg) translate(5px, -5px)
+}
+
+#drop span.open:nth-child(3) {
+    opacity: 0
+}
+
+/*上方工具列按鈕動畫設定END*/

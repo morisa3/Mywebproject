@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>叡桑的異想世界</title>
+	<!-- css element-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<!--預設css輸入-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--font-awesome小圖標輸入-->
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/idcontrol.css">
+	<!--自訂css輸入-->
+	<!-- css element end-->
+</head>
+	<body>
+	
+	<section>
+		<canvas id="canvas"></canvas>
+		<div class="wrapper_1">
+		    <div class="container">
+				<nav>
+					<div id="drop">
+	                	<div>
+		                    <span></span>
+		                    <span></span>
+		                    <span></span>
+	                	</div>
+            		</div>
+        		</nav>
+				<ul>
+					<li><a href=""><i class="fa fa-caret-right"></i><span>PS面面觀</span></a></li>
+					<li><a href=""><i class="fa fa-caret-right"></i>探詢文字之美</a></li>
+					<li><a href=""><i class="fa fa-caret-right"></i>實用小工具</a></li>
+					<li><a href=""><i class="fa fa-caret-right"></i>作品介紹</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+	    	<defs>
+	          <filter id="filter">
+	              <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+	              <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+	          </filter>
+	        </defs>
+    	</svg>
+
+		<div class="wrapper_2">
+			<div class="container">				
+				<div class="row d-inline-block">
+					<img id="animate_1" class="img" src="img/logo_big.gif"  alt="">
+				</div>	
+				<div class="row">
+					<div class="col-md-3 text-md-right">
+						<div class="col-sm-12">
+							<p style="color: yellow">學習<br/>永無止境</p>							
+						</div>
+					</div>
+
+					<!--<hr class="clearfix w-100 d-md-none pb-3">-->
+
+					<a class="col-md-2 text-md-left" href="">
+						<div class="col-sm-12">
+							<div class="btn  btn-small btn-clear btn-light btn-glitch">PS面面觀<br/>入口</div>
+						</div>
+					</a>
+					<a class="col-md-2 text-md-left" href="">
+						<div class="col-sm-12">
+							<div class="btn  btn-small btn-clear btn-light btn-glitch">探詢文字<br/>入口</div>
+						</div>
+					</a>
+					<a class="col-md-2 text-md-left" href="">
+						<div class="col-sm-12">
+							<div class="btn  btn-small btn-clear btn-light btn-glitch">實用工具<br/>入口</div>
+						</div>
+					</a>
+				</div>			
+			</div>
+		</div>
+	</section>
+
+	<section id=section_1>
+			
+	</section>
+
+	<section id=section_2>
+			
+	</section>
+
+
+		<!-- jquery element-->
+		<script
+	  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  	crossorigin="anonymous"></script>
+		<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+		crossorigin="anonymous"></script>
+		<script 
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" 
+		integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" 
+		crossorigin="anonymous"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+		<script src="jquery.mousewheel.min.js"></script>
+		<script src="jquery.mCustomScrollbar.js"></script>
+		<!--mCustomScrollbar插件-->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+		<!--TweenMax特效插件-->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!--vue.js插件-->
+		<script src="js/Jq_main.js"></script>
+		<script src="js/Js_animate_control.js"></script>
+		<!--個人js輸入-->		
+		<script src="js/html5shiv.min.js"></script>
+		<!--IE兼容性問題解決-->
+		<!-- jquery element end-->
+
+
+		<!-- 首頁動畫-->
+		<script>
+			var _createClass = function () 
+			  {
+			    function defineProperties(target, props) 
+			    {
+			      for (var i = 0; i < props.length; i++) 
+			      {
+			        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;
+			          descriptor.configurable = true;
+			          if ("value" in descriptor) descriptor.writable = true;
+			          Object.defineProperty(target, descriptor.key, descriptor);
+			      }
+			    }
+			    return function (Constructor, protoProps, staticProps) 
+			    {
+			      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+			      if (staticProps) defineProperties(Constructor, staticProps);
+			      return Constructor;
+			    };
+			  }();
+			  function _classCallCheck(instance, Constructor) 
+			  {
+			    if (!(instance instanceof Constructor)) 
+			      {
+			        throw new TypeError("Cannot call a class as a function");
+			      }
+			  }
+
+			    var Line = function ()
+			     {
+			      function Line(x, y, size, color, speed, seed, amplitude) 
+			      {
+			        _classCallCheck(this, Line);
+			          this.x = x;
+			          this.y = y;
+			          this.size = size;
+			          this.color = color;
+			          this.speed = speed;
+			          this.seed = seed;
+			          this.amplitude = amplitude;
+			          this.i = this.seed;
+			      }
+			         _createClass(Line, [
+			          { key: 'update', value: function update()
+			         {
+			          this.y -= this.speed;
+			          this.i += this.seed;
+			    } }, { key: 'draw', value: function draw(
+
+			    canvas) {
+			      var x = this.x + Math.sin(this.i) * this.amplitude;
+
+			      canvas.ctx.beginPath();
+			      canvas.ctx.fillStyle = this.color;
+			      canvas.ctx.shadowColor = this.color;
+			      canvas.ctx.shadowBlur = 5;
+			      canvas.ctx.arc(x, this.y, this.size, 0, 2 * Math.PI);
+			      canvas.ctx.fill();
+			      canvas.ctx.closePath();
+			    } }]);return Line;}();var
+
+
+			Canvas = function () {
+			  function Canvas(ctx, w, h) {_classCallCheck(this, Canvas);
+			    this.ctx = ctx;
+			    this.width = w;
+			    this.height = h;
+			    this.scale = 1.0;
+			    this.lines = [];
+			  }_createClass(Canvas, [{ key: 'pushParticle', value: function pushParticle()
+
+			    {
+			      var x = Math.random() * this.width;
+			      var y = this.height + Math.random() * 250;
+			      var size = 1 + Math.random();
+
+			      var g = Math.floor(150 + Math.random() * 50);
+			      var b = Math.floor(150 + Math.random() * 50);
+			      var color = 'rgba(120,' + g + ',' + b + ',0.7)';
+
+			      var speed = 2 + Math.random() * 1.5;
+			      var seed = Math.random() / 20;
+			      var amp = Math.random() * 15;
+
+			      this.lines.push(new Line(x, y, size, color, speed, seed, amp));
+			    } }, { key: 'start', value: function start()
+
+			    {
+			      for (var i = 0; i < 100; i++) {
+			        this.pushParticle();
+			      }
+			    } }, { key: 'update', value: function update()
+
+			    {
+			      for (var i = 0; i < this.lines.length; i++) {
+			        var line = this.lines[i];
+
+			        line.update();
+			      }
+
+			      this.lines = this.lines.filter(function (line) {
+			        return line.y > -2;
+			      });
+
+			      var toAdd = 100 - this.lines.length;
+
+			      if (toAdd === 0) {return;}
+
+			      for (var _i = 0; _i < toAdd; _i++) {
+			        this.pushParticle();
+			      }
+			    } }, { key: 'draw', value: function draw()
+
+			    {
+			      this.ctx.shadowColor = '#000';
+			      this.ctx.shadowBlur = 0;
+			      this.ctx.globalCompositeOperation = 'source-over';
+			      this.ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+			      this.ctx.fillRect(0, 0, this.width, this.height);
+			      this.ctx.globalCompositeOperation = 'lighter';
+
+			      for (var i = 0; i < this.lines.length; i++) {
+			        var line = this.lines[i];
+
+			        line.draw(this);
+			      }
+			    } }]);return Canvas;}();
+
+
+			(function (_) {
+			  var canvasElement = document.getElementById('canvas'),
+			  ctx = canvasElement.getContext('2d'),
+			  canvas = new Canvas(ctx);
+
+			  var w = canvasElement.width = window.innerWidth,
+			  h = canvasElement.height = window.innerHeight,
+			  density = 1;
+
+			  function setup() {
+			    window.addEventListener('resize', resize);
+
+			    density = window.devicePixelRatio != undefined ? window.devicePixelRatio : 1.0;
+
+			    canvasElement.width = w * density;
+			    canvasElement.height = h * density;
+
+			    canvas.width = w;
+			    canvas.height = h;
+			    canvas.scale = density;
+
+			    ctx.scale(density, density);
+
+			    canvas.start();
+
+			    draw();
+			  }
+
+			  function draw() {
+			    canvas.update();
+			    canvas.draw();
+
+			    window.requestAnimationFrame(draw);
+			  }
+
+			  function resize() {
+			    w = canvasElement.width = window.innerWidth;
+			    h = canvasElement.height = window.innerHeight;
+
+			    canvasElement.width = w * density;
+			    canvasElement.height = h * density;
+
+			    canvas.width = w;
+			    canvas.height = h;
+
+			    ctx.scale(density, density);
+			  }
+
+			  setup();
+			})();
+		</script>
+	
+	</body>
+</html>
