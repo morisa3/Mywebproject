@@ -1,15 +1,16 @@
 /*go top 設定*/
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  if (scroll > 100) $('#drop').addClass('active');
-  else if (scroll < 80) $('#drop').removeClass('active');
-});
 
-$(function () {
-  $('a[href*=#]').on('click', function (e) {
-    e.preventDefault();
-  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
-  });
+$("#gotop").click(function(){
+    jQuery("html,body").animate({
+        scrollTop:0
+    },1000);
+});
+$(window).scroll(function() {
+    if ( $(this).scrollTop() > 300){
+        $('#gotop').fadeIn("fast");
+    } else {
+        $('#gotop').stop().fadeOut("fast");
+    }
 });
 
 /*上方工作列設定*/
