@@ -54,6 +54,7 @@ ul>li>a>i{
 	padding-right:8px;
 }
 
+
 /*通用設定END*/
 
 
@@ -169,91 +170,15 @@ ul>li>a>i{
 
 /*不規則按鈕設定END*/
 
-/*Scroll動畫設定(暫時棄用)*/
-
-#section_1{
-
-	background: #FFB27FFF center center / cover no-repeat;
-}
-
-#section_1 a {
-  padding-top: 80px;
-}
-#section_1 a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb07 2s infinite;
-  animation: sdb07 2s infinite;
-  opacity: 0;
-  box-sizing: border-box;
-}
-#section_1 a span:nth-of-type(1) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-#section_1 a span:nth-of-type(2) {
-  top: 16px;
-  -webkit-animation-delay: .15s;
-  animation-delay: .15s;
-}
-#section_1 a span:nth-of-type(3) {
-  top: 32px;
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
-}
-
-@-webkit-keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/*Scroll動畫設定END(暫時棄用)*/
-
 
 /*響應式尺寸設定*/
 
-@media (max-width: 576px){
-	div.container .row p{
-		visibility: hidden;
-	}
-	.wrapper_2 img{
-		position: relative;
-		margin-top:100px; 
-		margin-bottom:20px; 
-		left: 30px;
-	}
-}
 
 @media (min-width: 576px){
 	div.container .row p{
 		visibility: hidden;
 	}
+
 	.wrapper_2 img{
 		position: relative;
 		margin-top:100px; 
